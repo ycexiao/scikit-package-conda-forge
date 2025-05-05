@@ -8,20 +8,17 @@ import pexpect
 cc_path = (Path.cwd()).resolve()
 p = pexpect.spawn(f"cookiecutter {cc_path}")
 
-p.expect("github_org .*")
+p.expect("github_username_or_orgname .*")
 p.sendline("diffpy")
 
-p.expect("module_name .*")
-p.sendline("diffpy.utils")
+p.expect("package_import_name .*")
+p.sendline("diffpy.my_project")
 
-p.expect("repo_name .*")
-p.sendline("diffpy.utils")
+p.expect("github_repo_name .*")
+p.sendline("diffpy.my_project")
 
 p.expect("version .*")
 p.sendline("3.4.0")
-
-p.expect("Select source.*")
-p.sendline("1")
 
 p.expect("project_short_description .*")
 p.sendline("Shared utilities for diffpy packages.")
@@ -39,19 +36,19 @@ p.expect("license_file .*")
 p.sendline("LICENSE.txt")
 
 p.expect("recipe_maintainers .*")
-p.sendline("sbillinge, Sparks29032, dragonyanglong, CJ-Wright, pavoljuhas")
+p.sendline("sbillinge, bobleesj")
 
 p.expect("build_requirements .*")
 p.sendline("")
 
 p.expect("host_requirements .*")
-p.sendline("python >=3.10, setuptools, pip,")
+p.sendline("python >=3.10, setuptools, pip")
 
 p.expect("runtime_requirements .*")
-p.sendline("python >=3.10, setuptools, numpy >= 1.3,")
+p.sendline("python >=3.10, setuptools, numpy >= 1.3")
 
 p.expect("testing_requirements .*")
-p.sendline("pytest, pytest-mock, freezegun,")
+p.sendline("pytest, pytest-mock, freezegun")
 
 p.expect("test_these_imports .*")
 p.sendline("diffpy, diffpy.utils, diffpy.utils.parsers, diffpy.utils.tests")

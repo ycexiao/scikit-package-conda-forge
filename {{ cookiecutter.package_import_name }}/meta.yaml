@@ -1,13 +1,13 @@
-{{ "{% set name =" | safe }} "{{ cookiecutter.module_name }}" {{ "%}" | safe }}
+{{ "{% set name =" | safe }} "{{ cookiecutter.package_import_name }}" {{ "%}" | safe }}
 {{ "{% set version =" | safe }} "{{ cookiecutter.version }}" {{ "%}" | safe }}
 {{ "{% set python_min =" | safe }} "{{ cookiecutter.min_python_version }}" {{ "%}" | safe }}
 
-package:
+kage:
   name: {{ "{{ name|lower }}" | safe }}
   version: {{ "{{ version }}" | safe }}
 
 source:
-  url: GENERATE_SOURCE
+  url: GENERATE_PYPI_URL
   sha256: {{ "GENERATE_SHA" | safe }}
 
 build:
@@ -40,15 +40,15 @@ test:
     - pytest
 
 about:
-  home: https://github.com/{{ cookiecutter.github_org }}/{{ cookiecutter.repo_name }}/
+  home: https://github.com/{{ cookiecutter.github_repo_name }}/{{ cookiecutter.github_repo_name }}/
   summary: {{ cookiecutter.project_short_description }}
   license: BSD-3-Clause
   license_family: BSD
   license_file: {{ cookiecutter.license_file }}
   description: |
     {{ cookiecutter.project_full_description }}
-  doc_url: http://{{ cookiecutter.github_org }}.github.io/{{ cookiecutter.repo_name }}/
-  dev_url: https://github.com/{{ cookiecutter.github_org }}/{{ cookiecutter.repo_name}}/
+  doc_url: http://{{ cookiecutter.github_repo_name }}.github.io/{{ cookiecutter.github_repo_name }}/
+  dev_url: https://github.com/{{ cookiecutter.github_repo_name }}/{{ cookiecutter.github_repo_name}}/
 
 extra:
   recipe-maintainers:
