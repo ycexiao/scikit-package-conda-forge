@@ -10,4 +10,3 @@ jobs:
     uses: scikit-package/release-scripts/.github/workflows/_check-news-item.yml@v0
     with:
       project: scikit-package-conda-forge
-
