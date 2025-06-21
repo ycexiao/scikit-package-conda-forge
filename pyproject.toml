@@ -1,20 +1,32 @@
+[tool.codespell]
+exclude-file = ".codespell/ignore_lines.txt"
+ignore-words = ".codespell/ignore_words.txt"
+skip = "*.cif,*.dat"
+
+[tool.docformatter]
+recursive = true
+wrap-summaries = 72
+wrap-descriptions = 72
+
 [tool.black]
-line-length = 115
+line-length = 79
 include = '\.pyi?$'
 exclude = '''
 /(
-    \.git\
+    \.git
+  | \.hg
   | \.mypy_cache
   | \.tox
   | \.venv
-  | _build/
+  | \.rst
+  | \.txt
+  | _build
   | buck-out
   | build
   | dist
+
+  # The following are specific to Black, you probably don't want those.
   | blib2to3
-  | tests/data/
-  | hooks/post_gen_project.py$
-  | .*\.py$
-  | .*\.toml$
+  | tests/data
 )/
 '''
