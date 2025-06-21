@@ -1,1 +1,1 @@
-Please refer to the conda-forge package section in https://billingegroup.github.io/scikit-package.
+Please refer to the conda-forge release section in https://scikit-package.github.io/scikit-package/.
