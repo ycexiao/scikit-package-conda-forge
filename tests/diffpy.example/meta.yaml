@@ -1,0 +1,58 @@
+{% set name = "diffpy.pdfgui" %}
+{% set version = "3.1.0" %}
+{% set python_min = "3.11" %}
+
+kage:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/d/diffpy_pdfgui/diffpy_pdfgui-3.1.0.tar.gz
+  sha256: 2ac7c32f2c3687a063757db4d035d4d309c80f05498f468a8b9fa77c91462c2f
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+
+  host:
+    - python {{ python_min }}
+    - setuptools
+    - setuptools-git-versioning >=2.0
+    - pip
+
+  run:
+    - python >={{ python_min }}
+    - numpy
+
+test:
+  requires:
+    - python {{ python_min }}
+    - pip
+    - pytest
+
+  source_files:
+    - tests
+
+  commands:
+    - pip check
+    - pytest
+
+about:
+  home: https://github.com/diffpy.pdfgui/diffpy.pdfgui/
+  summary: Python package for doing science.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.rst
+  description: |
+    This is a Python package for doing science.
+  doc_url: http://diffpy.pdfgui.github.io/diffpy.pdfgui/
+  dev_url: https://github.com/diffpy.pdfgui/diffpy.pdfgui/
+
+extra:
+  recipe-maintainers:
+    - sbillinge
+    - bobleesj

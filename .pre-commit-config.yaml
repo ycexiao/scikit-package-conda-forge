@@ -14,7 +14,7 @@ repos:
     rev: v4.6.0
     hooks:
       - id: check-yaml
-        exclude: "{{ cookiecutter.package_import_name }}/meta.yaml"
+        exclude: ^.*meta\.yaml$
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-case-conflict
