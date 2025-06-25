@@ -1,5 +1,6 @@
 **Added:**
 
+* Add test on PR CI without codecov report.
 * Add a test for generating meta.yaml by entering input values to cookiecutter.
 
 **Changed:**
