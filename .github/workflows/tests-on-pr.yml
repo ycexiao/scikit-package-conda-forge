@@ -7,4 +7,3 @@ on:
 jobs:
   tests-on-pr:
     uses: scikit-package/release-scripts/.github/workflows/_tests-on-pr-no-codecov-no-headless.yml@v0
-
