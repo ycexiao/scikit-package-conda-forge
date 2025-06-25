@@ -25,8 +25,6 @@ def test_meta_yaml_matches_reference(tmp_path):
         },
         output_dir=str(tmp_path),
     )
-    generated = tmp_path / "diffpy.pdfgui" / "meta.yaml"
-    reference = Path("tests/diffpy.example/meta.yaml")
-    assert generated.exists()
-    assert reference.exists()
-    assert filecmp.cmp(generated, reference)
+    actual_meta = tmp_path / "diffpy.pdfgui" / "meta.yaml"
+    expected_meta = Path("tests/diffpy.example/meta.yaml")
+    assert filecmp.cmp(actual_meta, expected_meta)
