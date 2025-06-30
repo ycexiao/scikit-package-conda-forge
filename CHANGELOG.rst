@@ -21,4 +21,3 @@ Release notes
 **Removed:**
 
 * Remove support for using GitHub source code to generate meta.yml file.
-
