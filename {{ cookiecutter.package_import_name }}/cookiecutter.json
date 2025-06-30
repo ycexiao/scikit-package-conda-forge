@@ -1,15 +1,15 @@
 {
-    "github_username_or_orgname": "{{ cookiecutter.github_username_or_orgname }}",
-    "package_import_name": "{{ cookiecutter.package_import_name }}",
-    "github_repo_name": "{{ cookiecutter.github_repo_name }}",
-    "version": "{{ cookiecutter.version }}",
-    "min_python_version": "{{ cookiecutter.min_python_version }}",
-    "project_short_description": "{{ cookiecutter.project_short_description }}",
-    "project_full_description": "{{ cookiecutter.project_full_description }}",
-    "license_file": "{{ cookiecutter.license_file }}",
-    "recipe_maintainers": "{{ cookiecutter.recipe_maintainers }}",
-    "build_requirements": "{{ cookiecutter.build_requirements }}",
-    "host_requirements": "{{ cookiecutter.host_requirements }}",
-    "runtime_requirements": "{{ cookiecutter.runtime_requirements }}",
-    "testing_requirements": "{{ cookiecutter.testing_requirements }}"
+  "github_username_or_orgname": "{{ cookiecutter.github_username_or_orgname }}",
+  "package_import_name": "{{ cookiecutter.package_import_name }}",
+  "github_repo_name": "{{ cookiecutter.github_repo_name }}",
+  "version": "{{ cookiecutter.version }}",
+  "min_python_version": "{{ cookiecutter.min_python_version }}",
+  "project_short_description": "{{ cookiecutter.project_short_description }}",
+  "project_full_description": "{{ cookiecutter.project_full_description }}",
+  "license_file": "{{ cookiecutter.license_file }}",
+  "recipe_maintainers": "{{ cookiecutter.recipe_maintainers }}",
+  "build_requirements": "{{ cookiecutter.build_requirements }}",
+  "host_requirements": "{{ cookiecutter.host_requirements }}",
+  "runtime_requirements": "{{ cookiecutter.runtime_requirements }}",
+  "testing_requirements": "{{ cookiecutter.testing_requirements }}"
 }
