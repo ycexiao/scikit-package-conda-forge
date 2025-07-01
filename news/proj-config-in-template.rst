@@ -1,6 +1,6 @@
 **Added:**
 
-* Add `cookiecutter.json` in the template to allow `scikit-package-conda-forge` to automatically create the project-level config.
+* Add ``cookiecutter.json`` in the template to allow ``scikit-package-conda-forge`` to automatically create the project-level config.
 
 **Changed:**
 
