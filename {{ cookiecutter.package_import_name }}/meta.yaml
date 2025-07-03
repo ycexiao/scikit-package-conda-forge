@@ -2,7 +2,7 @@
 {{ "{% set version =" | safe }} "{{ cookiecutter.version }}" {{ "%}" | safe }}
 {{ "{% set python_min =" | safe }} "{{ cookiecutter.min_python_version }}" {{ "%}" | safe }}
 
-kage:
+package:
   name: {{ "{{ name|lower }}" | safe }}
   version: {{ "{{ version }}" | safe }}
 
