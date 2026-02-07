@@ -14,6 +14,8 @@ build:
   noarch: python
   number: 0
   script: {{ "{{ PYTHON }}" }} -m pip install --no-deps --ignore-installed .
+  entry_points:
+    -  {{ cookiecutter.package_import_name }} = {{ cookiecutter.package_import_name }}.{{ cookiecutter.package_import_name.replace(".", "_").lower() }}_app:main
 
 requirements:
   build:
